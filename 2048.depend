@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1525965627 source:c:\users\administrator\desktop\baitaplon\2048\console.cpp
+	"console.h"
+
+1525577589 c:\users\administrator\desktop\baitaplon\2048\console.h
+	<windows.h>
+	<iostream>
+	<time.h>
+
+1526004778 source:c:\users\administrator\desktop\baitaplon\2048\main.cpp
+	<fstream>
+	<conio.h>
+	"menu.h"
+	"xuly.h"
+
+1525971248 source:c:\users\administrator\desktop\baitaplon\2048\vekhung.cpp
+	"vekhung.h"
+
+1525971041 c:\users\administrator\desktop\baitaplon\2048\vekhung.h
+	"console.h"
+
+1525878877 source:c:\users\administrator\desktop\baitaplon\2048\xuly.cpp
+	"xuly.h"
+
+1525874797 c:\users\administrator\desktop\baitaplon\2048\xuly.h
+	"vekhung.h"
+	<conio.h>
+
+1525578344 source:c:\users\administrator\desktop\baitaplon\2048\dieukhien.cpp
+	"dieukhien.h"
+
+1525578344 c:\users\administrator\desktop\baitaplon\2048\dieukhien.h
+	"xuly.h"
+	<conio.h>
+
+1525957653 c:\users\administrator\desktop\baitaplon\2048\menu.h
+	"console.h"
+
+1525957590 source:c:\users\administrator\desktop\baitaplon\2048\menu.cpp
+	"menu.h"
+
+1525970284 source:c:\users\administrator\desktop\baitaplon\2048\bestsc.cpp
+	"bestsc.h"
+
+1525970816 c:\users\administrator\desktop\baitaplon\2048\bestsc.h
+

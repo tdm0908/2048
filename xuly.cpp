@@ -1,6 +1,8 @@
 #include"xuly.h"
 
 
+
+/* ham di chuyen tro choi sang trai*/
 void dichuyensangtrai(int toado[][4],int &diem,int a[][4],int &check)
 {	// dich chuyen cac phan tu khac 0 ve ben trai
 	for(int hang=0;hang<4;hang++)
@@ -9,25 +11,25 @@ void dichuyensangtrai(int toado[][4],int &diem,int a[][4],int &check)
 				{
 					for(int i=j-1;i>=0;i--)
 						{
-							if(toado[hang][i]==0)
+							if(toado[hang][i]==0)     // neu ttoa do bang 0
 							{
-								toado[hang][i]=toado[hang][i+1];
-								toado[hang][i+1]=0;
-								diem+=toado[hang][i+1];
+								toado[hang][i]=toado[hang][i+1]; // toa do vi tri ben tay trai gan bang toa do vi tri ben tay phai
+								toado[hang][i+1]=0;             // toa do vi tri ben phai gan bang 0
 							}
 						}
 				}
 		}
-	//Xet 2 gia tri ke nhau ma bang nhau thi cong 2 so lai roi xoa di 1 so
+
+	//Xet 2 gia tri ke nhau ma bang nhau thi cong 2 so vao so ben trai va xoa di so ben trai, gan gia tri so ben phai la 0
 	for(int h=0;h<4;h++)
 	{
 		for(int c=0;c<4;c++)
 		{
-			if(toado[h][c] == toado[h][c+1])
+			if(toado[h][c] == toado[h][c+1])       // neu toa do vi tri ben trai bang vi tri ben phai
 			{
-				toado[h][c]+=toado[h][c];
-				diem+=toado[h][c];
-				toado[h][c+1]=0;
+				toado[h][c]+=toado[h][c];       // toa do vi tri ben trai tang gap doi
+				diem+=toado[h][c];              // diem cong them bang gia tri vi tri do
+				toado[h][c+1]=0;                //toa do ben phai ban bang 0
 			}
 		}
 	}
@@ -46,7 +48,7 @@ void dichuyensangtrai(int toado[][4],int &diem,int a[][4],int &check)
 				}
 			}
 		}
-
+    /* ham kiem tra con co di chuyen sang trai duoc nua hay khong*/
 	for(int i=0;i<4;i++)
 	{
 		for(int j=0;j<4;j++)
@@ -59,10 +61,10 @@ void dichuyensangtrai(int toado[][4],int &diem,int a[][4],int &check)
 	}
 }
 
-
+/*ham di chuyen tro chooi sang ben phai */
 void dichuyensangphai(int toado[][4],int &diem,int a[][4],int &check)
 {
-
+    // dich chuyen cac phan tu khac 0 ve ben phai
 	for(int hang=0;hang<4;hang++)
 	{
 		for(int j=2;j>=0;j--)
@@ -77,7 +79,7 @@ void dichuyensangphai(int toado[][4],int &diem,int a[][4],int &check)
 			}
 		}
 	}
-	//Xet 2 gia tri ke nhau ma bang nhau thi cong 2 so lai roi xoa di 1 so
+	////Xet 2 gia tri ke nhau ma bang nhau thi cong 2 so vao so ben trai va xoa di so ben trai, gan gia tri so ben phai la 0
 
 	for(int i=0;i<=3;i++)
 	{
@@ -91,7 +93,7 @@ void dichuyensangphai(int toado[][4],int &diem,int a[][4],int &check)
 			}
 		}
 	}
-
+    //dich chuyen cac phan tu khac 0 ve ben phai
 	for(int hang=0;hang<4;hang++)
 	{
 		for(int j=2;j>=0;j--)
@@ -106,7 +108,7 @@ void dichuyensangphai(int toado[][4],int &diem,int a[][4],int &check)
 			}
 		}
 	}
-
+    // kiem tra con co the di chuyen sang phai nua hay k
 	for(int i=0;i<4;i++)
 	{
 		for(int j=0;j<4;j++)
@@ -119,7 +121,7 @@ void dichuyensangphai(int toado[][4],int &diem,int a[][4],int &check)
 	}
 }
 
-
+/*ham dich chuyen tro choi len tren(tuong tu 2 ham tren)*/
 void dichuyenlen(int toado[][4],int &diem,int a[][4],int &check)
 {
 	for(int cot=0;cot<4;cot++){
@@ -177,7 +179,7 @@ void dichuyenlen(int toado[][4],int &diem,int a[][4],int &check)
 		}
 	}
 }
-
+/*ham dich chuyen tro choi xuong duoi(tuong tu 2 ham tren)*/
 void dichuyenxuong(int toado[][4],int &diem,int a[][4],int &check)
 {
 
@@ -195,7 +197,7 @@ void dichuyenxuong(int toado[][4],int &diem,int a[][4],int &check)
 				}
 			}
 		}
-	//Xet 2 gia tri ke nhau ma bang nhau thi cong 2 so lai roi xoa di 1 so
+
 
 	for(int j=0;j<4;j++)
 	{
@@ -232,3 +234,4 @@ void dichuyenxuong(int toado[][4],int &diem,int a[][4],int &check)
 		}
 	}
 }
+
